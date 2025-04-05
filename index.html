@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAO Управление Фондом</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Подключение</h2>
+    <button id="connectButton">Подключить MetaMask</button>
+    <div id="accountInfo"></div>
+
+    <!-- Секции, доступные после подключения -->
+    <div class="main-section" id="daoActions" > <!-- Скрываем изначально -->
+        
+        <hr>
+        <h2>Предложения (Proposals)</h2>
+        <div id="proposalsList">
+            <p>Загрузка предложений...</p> 
+            <!-- Сюда будет выводиться список -->
+        </div>
+        <div>
+            <input type="text" id="proposalInput" placeholder="Описание нового предложения" disabled>
+            <button id="createProposalBtn" disabled>Создать предложение</button>
+        </div>
+
+        <hr>
+        <h2>Делегирование Голосов</h2>
+        <div>
+            <input type="text" id="delegateeAddress" placeholder="Адрес кому делегировать" disabled>
+            <button id="delegateBtn" disabled>Делегировать</button>
+        </div>
+        
+        <hr>
+        <h2>Уведомления</h2>
+        <div id="notifications"></div> 
+
+    </div>
+    
+    <!-- Подключаем скрипт как модуль -->
+    <script type="module" src="script.js"></script> 
+</body>
+</html> 
